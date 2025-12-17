@@ -1,0 +1,17 @@
+firefox
+alsa-utils
+alsa-lib
+base-devel
+docker
+git
+htop
+iw
+pacman-mirrorlist
+pacman-contrib
+nvim
+openssh
+reflector
+libxcb
+xcb-util
+xorg-xinit
+xorg-server
