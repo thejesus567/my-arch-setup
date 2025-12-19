@@ -15,3 +15,9 @@ libxcb
 xcb-util
 xorg-xinit
 xorg-server
+ttf-jetbrains-mono-nerd
+lazygit
+tree-sitter-cli
+fzf
+ripgrep
+fd
