@@ -2,6 +2,7 @@
 
 repo="https://github.com/thejesus567/dwm.git"
 blocks_repo="https://github.com/UtkarshVerma/dwmblocks-async.git"
+xinit_path="$HOME/.xinitrc"
 
 if command -v git >/dev/null 2>&1; then
   echo "git is already installed"
@@ -38,3 +39,14 @@ sudo make clean install
 mv ~/dwm/config-blocks.h ~/dwmblocks-async/config.h
 cd ~/dwmblocks-async
 sudo make clean install
+
+if [[ -f $xinit_path ]]; then
+  echo "Backing up existing .xinitrc"
+  cp $xinit_path "${xinit_path}.bak.$(date +%s)"
+fi
+
+cat >$xinit_path <<'EOF'
+setxkbmap es &
+dwmblocks &
+exec dwm
+EOF
