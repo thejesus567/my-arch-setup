@@ -7,3 +7,6 @@ done
 
 echo "Setting up DWM (thejesus567)..."
 ./packages/dwm-installer.sh
+
+echo "Setting up vi..."
+./packages/vi-installer.sh

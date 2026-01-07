@@ -1,8 +1,17 @@
 #!/bin/bash
 
+vi_path="/usr/bin/vi"
+
 # Text editor
-sudo pacman -S --needed --noconfirm vi
+if command -v vi >/dev/null 2>&1; then
+  echo "vi is already installed"
+else
+  echo "Installing vi..."
+  sudo pacman -S --needed --noconfirm vi
+fi
 
-# Symlink (TODO: add condition if symlink already exist)
-sudo ln -s /usr/bin/vim /usr/bin/vi
-
+if [[ -L $vi_path ]]; then
+  echo "Symlink exists in ${vi_path}"
+else
+  sudo ln -s /usr/bin/vim /usr/bin/vi
+fi
