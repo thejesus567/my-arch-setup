@@ -11,6 +11,8 @@ else
   sudo pacman -S git
 fi
 
+echo "Setting up DWM (thejesus567)..."
+
 if [ -d ~/dwm ]; then
   echo "dwm is already cloned"
 else

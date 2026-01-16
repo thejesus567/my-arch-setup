@@ -2,7 +2,7 @@
 
 vi_path="/usr/bin/vi"
 
-# Text editor
+echo "Setting up vi..."
 if command -v vi >/dev/null 2>&1; then
   echo "vi is already installed"
 else

@@ -4,6 +4,8 @@ repo=https://aur.archlinux.org/yay.git
 
 sudo pacman -S --needed git base-devel
 
+echo "Installing yay AUR helper..."
+
 if [[ -d ~/yay ]]; then
   echo "yay already cloned"
 else
