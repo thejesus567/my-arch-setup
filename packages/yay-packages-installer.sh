@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#TODO: Condition to validate yay is installed in the system
 if command -v yay >/dev/null 2>&1; then
   echo "yay is already installed"
 else
