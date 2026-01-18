@@ -7,7 +7,7 @@ sudo pacman -S --needed git base-devel
 echo "Installing yay AUR helper..."
 
 if [[ -d ~/yay ]]; then
-  echo "yay already cloned"
+  echo "yay is already cloned"
 else
   git clone $repo ~/yay
 fi
